@@ -1,0 +1,157 @@
+//   全站背景色
+body {
+  background: #F4F5F5 !important;
+}
+
+html{
+  font-size: 12px;
+}
+
+
+/*
+p-container :响应式容器类
+commonpositiontop:content常规定位（header固定脱离文档流）
+*/
+
+
+.p-container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto
+}
+
+
+
+.commonpositiontop {
+  position: relative;
+  top: 80px;
+}
+
+// 最大576尺寸 XS SM
+@media (max-width: 576px) {
+  .p-container {
+    padding: 0 2%;
+  }
+;
+  .header {
+    height: 50px;
+    line-height: 50px;
+  }
+;
+  //.ivu-row {
+  //  height: 50px;
+  //}
+;
+  .commonpositiontop {
+    top: 70px;
+  }
+}
+
+// 最小768尺寸 MD
+@media (min-width: 768px) {
+  .p-container {
+    width: 750px
+  }
+}
+
+// 最小992尺寸 lg
+@media (min-width: 992px) {
+  .p-container {
+    width: 960px;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+//@media (min-width: 1560px) {
+//  .container {
+//    width: 1200px
+//  }
+//}
+
+// 最小576 尺寸  SM+MD+LG
+@media (min-width: 576px) {
+  .header {
+    height: 60px;
+    line-height: 60px;
+  }
+;
+//  .ivu-row {
+//    height: 60px;
+//  }
+//;
+//  .ivu-col {
+//    height: 60px;
+//  }
+//;
+  .headerdropmenu {
+    text-align: left !important;
+  }
+}
+
+
+// 比较小的尺寸   适合iphone5
+@media (max-width: 360px) {
+  .header-search {
+    display: none;
+  }
+;
+  .ivu-col-span-xs-6 {
+    width: 50%;
+  }
+;
+  .ivu-col-span-xs-5 {
+    width: 37.5%;
+  }
+;
+}
+
+  // md768以下设备 占满格
+  @media (max-width: 768px) {
+    .p-container {
+      width: 100% !important;
+      padding: 0 0;
+    }
+  }
+
+
+.clearfix:after {
+    content: ".";     /**//*内容为“.”就是一个英文的句号而已。也可以不写。*/
+    display: block;   /**//*加入的这个元素转换为块级元素。*/
+    clear: both;     /**//*清除左右两边浮动。*/
+    visibility: hidden;      /**//*可见度设为隐藏。注意它和display:none;是有区别的。visibility:hidden;仍然占据空间，只是看不到而已；*/
+    line-height: 0;    /**//*行高为0；*/
+    height: 0;     /**//*高度为0；*/
+    font-size:0;    /**//*字体大小为0；*/
+}
+
+ .shareicon{
+    font-family: iconfont;
+  }
+
+
+ .active{
+   color: red;
+ }
+
+ html, body {
+  width: 100%;
+  height: 101%;
+  //overflow: auto;
+  margin: 0;
+  font-weight: 500;
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,Helvetica Neue,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Arial,sans-serif;
+  //font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+
+}
+
+ /* custom */
+a {
+  color: #7e8c8d ;
+  text-decoration: none;
+  -webkit-backface-visibility: hidden;
+}
+a:hover{
+  color: pink;
+}
