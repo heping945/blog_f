@@ -1,5 +1,5 @@
 # blog_f
-<<<<<<< HEAD
+
 new version created by vue-cli4
 =======
 
