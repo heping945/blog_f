@@ -19,17 +19,20 @@ Vue.use(mavonEditor);
 
 import './assets/css/normalize.css'
 import './assets/css/base.scss'
+import './assets/css/scroll.css'
 import "./assets/iconfont/iconfont.css";
 
-if(process.env.NODE_ENV =='development'){
-    var vConsole = new VConsole();
-    console.log('Hello world');
-}
+// if(process.env.NODE_ENV =='development'){
+//     var vConsole = new VConsole();
+//     console.log('Hello world');
+// }
 
 
-console.log(process.env)
+console.log(process.env.NODE_ENV,'NODE_ENV')
 export default new Vue({
     router,
     store,
     render: h => h(App)
 }).$mount('#app')
+
+Vue.config.devtools = true;

@@ -51,7 +51,6 @@
                 f: false,
                 cv: '',
                 post_id: this.$route.params.id,
-                cuser: this.userinfo.username,
                 newaddc: {}
             }
         },
@@ -59,11 +58,11 @@
             //判断是否有删除权限
             ifcandel() {
                 if (this.i) {
-                    if (this.i.author.username == this.cuser) {
+                    if (this.i.author.username == this.userinfo.username) {
                         return true
                     }
                 } else {
-                    if (this.item.author.username == this.cuser) {
+                    if (this.item.author.username == this.userinfo.username) {
                         return true
                     }
                 }

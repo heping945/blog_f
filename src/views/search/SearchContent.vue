@@ -118,8 +118,9 @@
       }
     },
     mounted() {
-      let res = storage.get('searcharg', '')
+      // let res = storage.get('searcharg', '')
       // let res = this.$route.query.q
+        let res = this.$store.state.search_arg
       if (res) {
         this.arg = res;
         this.initsearch()

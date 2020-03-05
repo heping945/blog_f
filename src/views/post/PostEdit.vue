@@ -284,7 +284,8 @@
             },
             //  小屏幕下  返回上页
             back() {
-                window.history.back()
+                // window.history.back()
+                this.$router.go(-1)
             },
             // 改变全屏状态下zindex使覆盖导航条
             changezindex(status, value) {

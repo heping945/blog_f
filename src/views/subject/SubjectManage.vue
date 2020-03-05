@@ -14,7 +14,7 @@
                 <Alert type="success" style="margin-top: 20px" v-if="summary.length">
                     <List>
                         <ListItem v-for="item,index in summary" :key="item.id" @click.native="updatechapter(item)">
-                            <b>{{index+1}}</b>：&nbsp;&nbsp;<b style="color: #007fff">{{item.order}}</b>：&nbsp;&nbsp;<b
+                            <b>{{saveInLocal+1}}</b>：&nbsp;&nbsp;<b style="color: #007fff">{{item.order}}</b>：&nbsp;&nbsp;<b
                                 style="color: rebeccapurple">{{item.id}}</b>：&nbsp;&nbsp;{{item.title}}
                         </ListItem>
                     </List>

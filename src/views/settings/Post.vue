@@ -64,7 +64,7 @@
                                     },
                                     on: {
                                         click: () => {
-                                            this.remove(params.index, params.row.id)
+                                            this.remove(params.saveInLocal, params.row.id)
                                         }
                                     }
                                 }, '删除')
