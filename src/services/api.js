@@ -194,3 +194,10 @@ export const getProfile = params => {
 export const updateProfile = params => {
   return api.patch(`/users/` + params.username+'/', params)
 };
+
+
+// 更改密码
+
+export const updatePassword = params =>{
+    return api.patch(`/userpwd/` + params.username+'/', params)
+}

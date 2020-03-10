@@ -41,7 +41,7 @@
                     <Alert type="success" style="margin-top: 20px" v-if="postres.length">
                       <List>
                         <ListItem v-for="item,index in postres" :key="item.id" @click.native="topost(item.id)">
-                          <b style="color: #2b85e4">{{saveInLocal+1}}</b>：&nbsp;&nbsp;{{item.title}}
+                          <b style="color: #2b85e4">{{index+1}}</b>：&nbsp;&nbsp;{{item.title}}
                         </ListItem>
                       </List>
                     </Alert>
@@ -61,7 +61,7 @@
                     <Alert type="success" style="margin-top: 20px" v-if="postres2.length">
                       <List>
                         <ListItem v-for="item,index in postres2" :key="item.id" @click.native="topost(item.id)">
-                          <b style="color: #2b85e4">{{saveInLocal+1}}</b>：&nbsp;&nbsp;{{item.title}}
+                          <b style="color: #2b85e4">{{index+1}}</b>：&nbsp;&nbsp;{{item.title}}
                         </ListItem>
                       </List>
                     </Alert>
@@ -76,7 +76,7 @@
                     <Alert type="success" style="margin-top: 20px" v-if="matsubject.length">
                       <List>
                         <ListItem v-for="item,index in matsubject" :key="item.id" @click.native="selects(item)">
-                          <b style="color: #2b85e4;overflow: hidden">{{saveInLocal+1}}：&nbsp;&nbsp;{{item.title}}</b>
+                          <b style="color: #2b85e4;overflow: hidden">{{index+1}}：&nbsp;&nbsp;{{item.title}}</b>
                         </ListItem>
                       </List>
                     </Alert>

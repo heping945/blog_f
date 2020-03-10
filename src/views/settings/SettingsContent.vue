@@ -4,7 +4,7 @@
       <div class="p-container topixtop">
         <ul>
           <li v-for="item,index in tablist" @click="changei(index)">
-            <router-link :to="{name:item.pathname}" :class='cindex==index? "active" :""'>{{item.title}}</router-link>
+            <router-link :to="{name:item.pathname}" >{{item.title}}</router-link>
           </li>
         </ul>
       </div>
@@ -68,6 +68,9 @@
         display: inline;
         margin-right: 1rem;
         margin-left: 5px;
+        a.router-link-exact-active{
+          color: #13c2c2;
+        }
       }
     }
   }

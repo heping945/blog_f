@@ -47,12 +47,7 @@
       </Col>
 
       <Col :xs="0" :sm="0" :md="0" :lg="6">
-        <!--        <SideBarRight></SideBarRight>-->
-        <Card :bordered="false">
-          <div style="text-align:center">
-            <h3>A high quality UI Toolkit based on Vue.js</h3>
-          </div>
-        </Card>
+        <SideBarRight></SideBarRight>
       </Col>
 
     </Row>
@@ -61,9 +56,13 @@
 
 <script>
   import {getuserdetail} from '../../services/api'
+      import SideBarRight from '@/components//utils/SideBarRight'
 
   export default {
     name: "UserContent",
+    components:{
+      SideBarRight
+    },
     data() {
       return {
         userinfo: {},

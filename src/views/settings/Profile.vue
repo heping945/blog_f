@@ -166,11 +166,14 @@
             text-align: right;
         }
 
-        /deep/ .ivu-input {
+        /deep/ .ivu-input{
             border: none;
             outline: none;
             padding: 0 0;
             font-size: 16px;
+        }
+        /deep/ .ivu-input:focus{
+            box-shadow:none;
         }
 
         .esc {

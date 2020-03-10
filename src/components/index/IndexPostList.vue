@@ -43,13 +43,15 @@
                                 <li v-if="$route.query.sort!='mod'">
                                     <Icon type="md-calendar"/>
                                     <!--                  {{item.create_date}}-->
-                                    {{moment(item.create_date).fromNow()}}
+                                    <!--                                    {{moment(item.create_date).fromNow()}}-->
+                                    <TimeFromNow :time="item.create_date"></TimeFromNow>
 
                                 </li>
                                 <li v-else>
                                     <Icon type="md-calendar"/>
                                     <!--                  {{item.mod_date}}-->
-                                    {{moment(item.mod_date).fromNow()}}
+                                    <!--                                    {{moment(item.mod_date).fromNow()}}-->
+                                    <TimeFromNow :time="item.mod_date"></TimeFromNow>
                                 </li>
                             </template>
                             <template slot="extra">
@@ -80,12 +82,12 @@
                                 </li>
                                 <li v-if="$route.query.sort!='mod'">
                                     <Icon type="md-calendar"/>
-                                    {{moment(item.create_date).fromNow()}}
+                                          <TimeFromNow :time="item.create_date"></TimeFromNow>
                                     <!--                  {{item.create_date}}-->
                                 </li>
                                 <li v-else>
                                     <Icon type="md-calendar"/>
-                                    {{moment(item.mod_date).fromNow()}}
+                                     <TimeFromNow :time="item.mod_date"></TimeFromNow>
                                 </li>
                             </template>
                         </ListItem>
@@ -103,6 +105,7 @@
 <script>
     import {getIndexPost} from '../../services/api'
     import LoadingSpain from '../utils/LoadingSpain'
+    import TimeFromNow from '@/components/TimeFromNow'
     import NoContent from '../utils/NoContent'
     import Axios from 'axios'
 
@@ -124,7 +127,8 @@
         },
         components: {
             LoadingSpain,
-            NoContent
+            NoContent,
+            TimeFromNow
         },
         filters: {
             excerptshort(value) {

@@ -161,8 +161,6 @@
         this.cindex = index;
         this.initsearch()
       },
-      // dateFormat,
-      moment,
       to_post(selection, row) {
         this.$router.push({name: 'postdetail', params: {id: selection.id}})
       },
