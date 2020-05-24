@@ -1,7 +1,7 @@
 <template>
     <div class="authen">
         <Row>
-            <Col :xs="0" :sm="0" :md="0" :lg="24">
+            <Col :xs="0" :sm="0" :md="24" :lg="24">
                 <div :class="{'container':true,'right-panel-active':ifshow}" id="container">
                     <!--          注册-->
                     <div class="form-container sign-up-container">
@@ -9,13 +9,13 @@
                             <h1>注册</h1>
                             <div class="social-container">
                                 <a :href="host+'qq'">
-                                    <Icon custom="icofont icon-qq" class="shareicon" :size="20"/>
+                                    <SvgIcon iconClass="qq"></SvgIcon>
                                 </a>
                                 <a :href="host+'weixin'">
-                                    <Icon custom="icofont icon-weixin" class="shareicon" :size="20"/>
+                                    <SvgIcon iconClass="weixin"></SvgIcon>
                                 </a>
                                 <a :href="host+'weibo'">
-                                    <Icon custom="icofont icon-weibo1" class="shareicon" :size="20"/>
+                                    <SvgIcon iconClass="weibo-oc"></SvgIcon>
                                 </a>
                             </div>
                             <Form ref="RegformInline" :model="reguserinfo" :rules="ruleInline">
@@ -46,13 +46,13 @@
                             <h1>登录</h1>
                             <div class="social-container">
                                 <a :href="host+'qq'">
-                                    <Icon custom="icofont icon-qq" class="shareicon" :size="20"/>
+                                    <SvgIcon iconClass="qq"></SvgIcon>
                                 </a>
                                 <a :href="host+'weixin'">
-                                    <Icon custom="icofont icon-weixin" class="shareicon" :size="20"/>
+                                    <SvgIcon iconClass="weixin"></SvgIcon>
                                 </a>
                                 <a :href="host+'weibo'">
-                                    <Icon custom="icofont icon-weibo1" class="shareicon" :size="20"/>
+                                    <SvgIcon iconClass="weibo-oc"></SvgIcon>
                                 </a>
                             </div>
                             <span style="margin-bottom: 20px">第三方账号登录</span>
@@ -91,18 +91,18 @@
                     </div>
                 </div>
             </Col>
-            <Col :xs="24" :sm="24" :md="24" :lg="0">
+            <Col :xs="24" :sm="24" :md="0" :lg="0">
                 <div id="m-log">
                     <Card>
                         <div class="social-container">
                             <a :href="host+'qq'">
-                                <Icon custom="icofont icon-qq" class="shareicon" :size="20"/>
+                                <SvgIcon iconClass="qq"></SvgIcon>
                             </a>
                             <a :href="host+'weixin'">
-                                <Icon custom="icofont icon-weixin" class="shareicon" :size="20"/>
+                                <SvgIcon iconClass="weixin"></SvgIcon>
                             </a>
                             <a :href="host+'weibo'">
-                                <Icon custom="icofont icon-weibo1" class="shareicon" :size="20"/>
+                                <SvgIcon iconClass="weibo-oc"></SvgIcon>
                             </a>
                         </div>
                         <Form ref="formInline" :model="userinfo" :rules="ruleInline">
@@ -137,7 +137,6 @@
 
     export default {
         name: "Login",
-        inject: ['reload'],
         data() {
             //验证密码是否一样的自定义验证
             const validatePassCheck = (rule, value, callback) => {
@@ -228,7 +227,10 @@
                                 this.isDisable = true
                                 setTimeout(() => {
                                     //刷新页面直接重载，不用$router.push('/login')因为当前页不会重载会继续注册页面
-                                    this.reload()
+                                    // this.reload()
+                                    //取消了reload刷新 20200421
+                                    this.reguserinfo = {}
+                                    this.ifshow = false
                                 }, 800);
                             }).catch(err => {
                                 // 无法确定返回的错误类型
@@ -263,7 +265,7 @@
                                     top: 200
                                 });
                                 console.log(data);
-                                this.SaveToken( {
+                                this.SaveToken({
                                     token: data.data.token,
                                     username: data.data.username,
                                     avatar: data.data.avatar,
@@ -299,7 +301,7 @@
         box-sizing: border-box;
     }
 
-    @media (min-width: 992px) {
+    @media (min-width: 768px) {
         .authen {
             background: #f6f5f7;
             display: flex;

@@ -1,5 +1,7 @@
 import axios from 'axios';
 import store from '@/store'
+import {Message} from "iview";
+import router from '@/router'
 
 
 const api = axios.create({
@@ -22,6 +24,24 @@ api.interceptors.request.use(config => {
         // Message.error('服务器错误')
         Promise.reject(err)
 );
+
+api.interceptors.response.use(
+    undefined,
+    error => {
+        if (error.response) {
+            switch (error.response.status) {
+                case 401:
+                    Message.warning("登录信息已过期，请您重新登录！")
+                    store.dispatch('ClearToken');
+                    router.replace({
+                        name: 'Login'
+                    });
+                    break;
+            }
+        }
+        return Promise.reject(error);
+    }
+)
 
 // // http response 拦截器
 // // 要改太多了暂时没用

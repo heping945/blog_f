@@ -1,7 +1,7 @@
 <template>
   <div>
     <div style="margin: 50px auto;text-align: center">
-      <img src="../../public/404.png" alt="" style="width: 90%;height: auto;max-width: 600px">
+      <img src="@/assets/img/404.png" alt="" style="width: 90%;height: auto;max-width: 600px">
     </div>
     <div class="tips">
       <h2 class="b-text">矮油~~您访问的页面不在地球上...</h2>

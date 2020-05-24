@@ -6,7 +6,7 @@
                     <div style="text-align:center">
                         <h3 style="font-size: 2rem">此设备不支持编辑文章请更换大设备</h3>
                         <br>
-                        <img src="../../../public/pikapi.gif" alt="皮卡丘" style="width:100%;height:auto;">
+                        <img src="@/assets/img/pikapi.gif" alt="皮卡丘" style="width:100%;height:auto;">
                         <br>
                         <br>
                         <p>
@@ -83,7 +83,7 @@
 
 <script>
     const SuspensionPanel = () => import('@/components/utils/SuspensionPanel')
-    import data from '../../../public/codestyle';
+    import data from '@/assets/json/codestyle';
     import {getcategorylist, getPostDetail, updatePost, gettaglist, createTag, postimgupload} from '../../services/api'
     import authenticate from '../../assets/js/authenticate'
     import storage from '../../assets/js/storage'

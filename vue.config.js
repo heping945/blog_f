@@ -7,7 +7,7 @@ module.exports = {
         config.set('externals', {
             vue: 'Vue',
             axios: 'axios',
-            // iview: 'iview',
+            iview: 'iview',
             'vue-router': 'VueRouter',
             nprogress: 'NProgress',
         })

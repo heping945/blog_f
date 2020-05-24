@@ -36,7 +36,7 @@
             <div class="sj"></div>
            <div class="dm">
              添加请注明缘由
-             <img src="../../../public/wx.jpg" alt="" width="160px">
+             <img src="@/assets/img/wx.jpg" alt="" width="160px">
            </div>
           </div>
         </span>
@@ -63,7 +63,7 @@
 </template>
 
 <script>
-  import data from '../../../public/showtext.json';
+  import data from '@/assets/json/showtext.json';
 
   export default {
     name: "SideBarRight",

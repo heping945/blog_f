@@ -7,7 +7,7 @@
                     <Col :xs="3" :sm="0" :md="0" :lg="0">
                         <div class="simpleheaderlogo">
                             <router-link to="/">
-                                <img src="../../../public/logo-xs.png" alt="logo" width="30" height="30">
+                                <img src="@/assets/img/logo-xs.png" alt="logo" width="30" height="30">
                             </router-link>
 
                         </div>
@@ -16,7 +16,7 @@
                     <Col :xs="0" :sm="4" :md="4" :lg="3">
                         <div class="superheaderlogo">
                             <router-link to="/">
-                                <img src="../../../public/logo-sm-md-lg.png" alt="logo" height="35" width="80">
+                                <img src="@/assets/img/logo-sm-md-lg.png" alt="logo" height="35" width="80">
                             </router-link>
                         </div>
                     </Col>

@@ -81,7 +81,7 @@
 <script>
 
     const SuspensionPanel = () => import('@/components/utils/SuspensionPanel')
-    import data from '../../../public/codestyle';
+    import data from '@/assets/json/codestyle';
     import {getcategorylist,createPost,createTag,gettaglist,postimgupload} from '../../services/api'
     import storage from '../../assets/js/storage'
 
